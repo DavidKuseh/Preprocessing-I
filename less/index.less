@@ -60,6 +60,21 @@ html, body {
 
 //my styling
 
+//Variables
+@jobTitles:  rgb(88, 62, 204);
+@mainFontFamily: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+//mixins
+.personalInfo() {
+	display: flex;
+	justify-content: center;
+}
+
+.menuNav() {
+	display: flex;
+	justify-content: space-around;
+}
+
 body {
 	width: 45%;
 	margin: auto;
@@ -67,12 +82,10 @@ body {
 
 .nav-bar {
 	margin: 20px 0 40px 0;
-	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-family: @mainFontFamily;
 }
 .nav-bar nav {
-	display: flex;
-	justify-content: space-around;
-	//align-items: stretch; 	
+	.menuNav();
 }
 
 a{
@@ -80,24 +93,25 @@ a{
 }
 
 .bio {
-	display: flex;
+	.personalInfo();
 
 	h2 {
 		font-size: 2rem;
 		font-weight: bold;
-		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		font-family: @mainFontFamily;
 		margin-bottom: 1rem;
 	}
 
-	p:nth-of-type(1) {
-		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	p {
+		font-family: @mainFontFamily;
 		margin-bottom: 1rem;
-		color: rgb(88, 62, 204);
+		color: @jobTitles;
 	}
 
-	p:nth-of-type(2) {
-		max-width: 80%;
-		margin-left : 0;
+	li {
+		font-family: @mainFontFamily;
+		padding: 0.5rem;
+		list-style-type: square;
 	}
 }
 
@@ -108,7 +122,7 @@ a{
 //main body
 
 .main {
-	display: flex;
+	.personalInfo();
 }
 
 .skills {
@@ -117,19 +131,19 @@ a{
 		text-decoration: underline;
 		font-weight: bold;
 		margin-bottom: 1.2rem;
-		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		font-family: @mainFontFamily;
 	}
 
 	ul>li {
 		width: 250px;
 		list-style-type: square;
 		padding: 0.5rem;
-		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		font-family: @mainFontFamily;
 	}
 }
 
 .work-history {
-	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-family: @mainFontFamily;
 	margin-left: 3.5rem;
 
 	h2 {
@@ -139,8 +153,8 @@ a{
 		font-weight: bold;
 	}
 
-	h3:nth-of-type(1) {
-		color: rgb(88, 62, 204);
+	h3 {
+		color: @jobTitles;
 		margin-bottom: 0.7rem;
 	}
 
@@ -163,14 +177,19 @@ a{
 
 footer {
 	.contact-info {
-		display: flex;
-		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-		justify-content: center;
+		.personalInfo();
+		font-family: @mainFontFamily;
 	}
 
-	small {
+	p {
+		padding: 1.2rem;
+	}
+
+	.copyright-info {
+		margin-top: 1.25rem;
 		width: 100%;
 		text-align: center;
+
 	}
 }
 

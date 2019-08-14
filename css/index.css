@@ -151,6 +151,7 @@ a {
 }
 .bio {
   display: flex;
+  justify-content: center;
 }
 .bio h2 {
   font-size: 2rem;
@@ -158,20 +159,22 @@ a {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin-bottom: 1rem;
 }
-.bio p:nth-of-type(1) {
+.bio p {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin-bottom: 1rem;
   color: #583ecc;
 }
-.bio p:nth-of-type(2) {
-  max-width: 80%;
-  margin-left: 0;
+.bio li {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 0.5rem;
+  list-style-type: square;
 }
 .top-pic {
   border-radius: 85px;
 }
 .main {
   display: flex;
+  justify-content: center;
 }
 .skills h3 {
   font-size: 1.5rem;
@@ -196,7 +199,7 @@ a {
   text-decoration: underline;
   font-weight: bold;
 }
-.work-history h3:nth-of-type(1) {
+.work-history h3 {
   color: #583ecc;
   margin-bottom: 0.7rem;
 }
@@ -213,10 +216,14 @@ a {
 }
 footer .contact-info {
   display: flex;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   justify-content: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-footer small {
+footer p {
+  padding: 1.2rem;
+}
+footer .copyright-info {
+  margin-top: 1.25rem;
   width: 100%;
   text-align: center;
 }
